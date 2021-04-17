@@ -28,4 +28,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build Docker
         run: |
-          docker build -t testBuild/v1
+          docker build -t test-build/v1
