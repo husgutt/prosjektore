@@ -14,7 +14,7 @@ jobs:
       - uses: actions/upload-artifact@main
         with:
           name: webpack artifacts
-          path: public/prosjekttore-app
+          path: public/prosjektore-app
 
   run-npm-test:
     runs-on: ubuntu-latest
