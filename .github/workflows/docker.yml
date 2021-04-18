@@ -2,8 +2,8 @@ name: Node CI
 
 on:
   push:
-      paths:
-    - "**Dockerfile**"
+    paths:
+      - "**Dockerfile**"
 
 jobs:
   build:
