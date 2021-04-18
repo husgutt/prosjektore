@@ -2,7 +2,8 @@ name: Node CI
 
 on:
   push:
-    branches: [ main ]
+      paths:
+    - "**Dockerfile**"
 
 jobs:
   build:
@@ -24,7 +25,7 @@ jobs:
     needs: build
     strategy:
       matrix:
-        os: [ubuntu-lastest, windows-2016]
+        os: [ubuntu-lastest]
         node-version: [14.15.4]
 
     steps:
