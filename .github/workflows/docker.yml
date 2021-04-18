@@ -41,7 +41,7 @@ jobs:
         run: |
           cd prosjektore-app
           npm install
-          npm test-headless
+          npm run test-headless
         env:
           CI: true
   
