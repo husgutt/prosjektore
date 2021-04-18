@@ -39,6 +39,7 @@ jobs:
           path: public
       - name: npm install, and test
         run: |
+          cd prosjektore-app
           npm install
           npm test
         env:
