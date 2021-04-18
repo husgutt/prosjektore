@@ -3,8 +3,6 @@ name: Node CI
 on:
   push:
     push: [ main ]
-    paths:
-      - "**dockerfile**"
 
 jobs:
   build:
