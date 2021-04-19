@@ -3,3 +3,14 @@
     background:indianred;
     margin-top: 0;
 }
+
+.container {
+    padding: 100px;
+    display: grid;
+    grid-template-columns: 30% auto 30%;
+    grid-gap: 10px;
+    color: #444;
+    align-items: flex-start;
+    background-color: bisque;
+    justify-content: center;
+}
