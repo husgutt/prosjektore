@@ -1,0 +1,8 @@
+<h3>backlogliste: </h3>
+<ul *ngFor="let backlog of backlogs">
+    <div class="container">
+        <li>
+            <app-backlog [backlog]="backlog"></app-backlog>
+        </li>
+    </div>
+</ul>

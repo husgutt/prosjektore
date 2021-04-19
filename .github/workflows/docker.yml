@@ -17,7 +17,7 @@ jobs:
       - uses: actions/upload-artifact@master
         with:
           name: webpack artifacts
-          path: dist/prosjektore-app
+          path: dist
   test:
     runs-on: ubuntu-latest
     needs: build
