@@ -7,7 +7,7 @@ import { Backlog } from '../domene/backlog';
   providedIn: 'root'
 })
 export class BacklogsService {
-  private backlogUrl = 'api/backlog/backlog.json';
+  private backlogUrl = 'api/backlogs/';
 
   constructor(private http: HttpClient)  { }
 

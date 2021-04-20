@@ -2,7 +2,12 @@
 <ul *ngFor="let backlog of backlogs">
     <div class="container">
         <li>
-            <app-backlog [backlog]="backlog"></app-backlog>
+            <div class="backlog">
+                <div class="top-bar"></div>
+                <div class="content">Tittel: {{ backlog.title }}</div>
+                <div class="content">Kort beskrivelse: {{ backlog.shortDescription }}</div>
+                <div class="content">Beskrivelse: {{ backlog.description }}</div>
+            </div>
         </li>
     </div>
 </ul>

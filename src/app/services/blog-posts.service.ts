@@ -7,11 +7,15 @@ import { Post } from 'src/app/domene/post';
   providedIn: 'root'
 })
 export class BlogPostsService {
-  private postUrl = 'api/posts/blogginnlegg.json';
+  private postUrl = 'api/posts/';
 
   constructor(private http: HttpClient)  { }
 
   getPosts(): Observable< Post[] > {
     return this.http.get<Post[]>(this.postUrl);
+  }
+
+  getPost(id: string): Observable< Post > {
+    return this.http.get<Post>(`${this.postUrl}/${id}`);
   }
 }

@@ -1,13 +1,28 @@
 .post {
-    height: 10em;
-    background-color: grey;
+    border-radius: 5px;
+    width: 90%;
+    background-color: #fefefe;
+    margin:auto;
+    margin-top: 20px;
+    padding: 10px;
+    min-height: 300px;
 }
 
-.top-bar {
-    background-color: hotpink;
+.title, .date {
+    padding: 10px;
+    display: block;
+    text-align: left;
 }
 
 .content {
     padding: 1em;
-    background-color: yellow;
 }
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color:#000;
+    height: 1px;
+  }

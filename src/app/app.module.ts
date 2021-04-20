@@ -9,6 +9,7 @@ import { PostComponent } from './components/post/post.component';
 import { BlogPostsService } from './services/blog-posts.service';
 import { BacklogListComponent } from './components/backlog-list/backlog-list.component';
 import { BacklogComponent } from './components/backlog/backlog.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,13 @@ import { BacklogComponent } from './components/backlog/backlog.component';
     BacklogComponent
   ],
   imports: [
+    RouterModule.forRoot([
+      { path: 'posts', component: PostListComponent },
+      { path: 'posts/:id', component: PostComponent },
+      { path: 'backlogs', component: BacklogListComponent },
+      { path: '', redirectTo: 'posts', pathMatch: 'full' },
+      { path: '**', redirectTo: 'posts', pathMatch: 'full' }
+    ]),
     HttpClientModule,
     BrowserModule,
     AppRoutingModule

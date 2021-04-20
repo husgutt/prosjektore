@@ -7,4 +7,48 @@
 
 ul {
    list-style: none; 
+}s
+
+li {
+    width: 100%;
+}
+
+.post {
+    border-radius: 5px;
+    width: 90%;
+    box-shadow: 2px 1px 3px;
+    border-radius: 5px;
+    background-color: #fefefe;
+    margin:auto;
+    margin-top: 20px;
+    padding: 10px;
+    min-height: 300px;
+}
+
+.post:hover {
+    box-shadow: 2px 1px 5px;
+}
+
+.title, .date {
+    padding: 10px;
+    display: block;
+    text-align: left;
+}
+
+.content {
+    padding: 1em;
+}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color:#000;
+    height: 1px;
+  }
+
+a,a:active,a:hover,a:visited,a:focus > .post {
+    text-decoration: none;
+    color: black;
 }

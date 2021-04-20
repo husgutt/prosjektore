@@ -1,9 +1,19 @@
-<div class="banner"><h1> PROSJEKTORE WHOHOOO!!! </h1></div>
+<nav role="navigation" class="primary-navigation">
+    <ul>    
+        <li><a [routerLink]="['/posts']">Blog posts</a></li>
+        <li><a [routerLink]="['/backlog']">Backlog</a></li>
+        <li><a [routerLink]="['/about']">About</a>
+            <ul class="dropdown">
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Illustration</a></li>
+                <li><a href="#">Iconography</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 
 <div class="container">
-    <app-backlog-list></app-backlog-list>
-    <app-post-list></app-post-list>
-    <h1>Hey</h1>    
+    <router-outlet></router-outlet>
 </div>
-
-<router-outlet></router-outlet>
