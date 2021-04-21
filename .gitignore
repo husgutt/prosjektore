@@ -45,3 +45,4 @@ TOKEN.txt
 # System Files
 .DS_Store
 Thumbs.db
+.github/workflows/docker copy.yml

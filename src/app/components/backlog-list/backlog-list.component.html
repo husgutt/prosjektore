@@ -1,13 +1,18 @@
-<h3>backlogliste: </h3>
-<ul *ngFor="let backlog of backlogs">
-    <div class="container">
-        <li>
-            <div class="backlog">
-                <div class="top-bar"></div>
-                <div class="content">Tittel: {{ backlog.title }}</div>
-                <div class="content">Kort beskrivelse: {{ backlog.shortDescription }}</div>
-                <div class="content">Beskrivelse: {{ backlog.description }}</div>
-            </div>
-        </li>
-    </div>
-</ul>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Tittel</th>
+            <th>Dato</th>
+            <th>Kort Beskrivelse</th>
+            <th>Beskrivelse</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let backlog of backlogs" [routerLink]="['/backlogs', backlog._id]">
+            <td>{{ backlog.title }}</td>
+            <td>{{ backlog.date }}</td>
+            <td>{{ backlog.shortDescription }}</td>
+            <td>{{ backlog.description }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -24,6 +24,7 @@ import { RouterModule } from '@angular/router';
       { path: 'posts', component: PostListComponent },
       { path: 'posts/:id', component: PostComponent },
       { path: 'backlogs', component: BacklogListComponent },
+      { path: 'backlogs/:id', component: BacklogComponent },
       { path: '', redirectTo: 'posts', pathMatch: 'full' },
       { path: '**', redirectTo: 'posts', pathMatch: 'full' }
     ]),

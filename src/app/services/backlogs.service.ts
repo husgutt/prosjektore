@@ -14,4 +14,8 @@ export class BacklogsService {
   getBacklogs(): Observable< Backlog[] > {
     return this.http.get< Backlog[] >(this.backlogUrl);
   }
+
+  getBacklog(id: string): Observable< Backlog > {
+    return this.http.get<Backlog>(`${this.backlogUrl}/${id}`);
+  }
 }
