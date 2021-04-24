@@ -35,13 +35,12 @@ jobs:
     - name: Login to github
       uses: docker/login-action@v1
       with:
+        registry: docker.pkg.github.com
         username: ${{github.actor}}
         password: ${{secrets.GITHUB_TOKEN}}
-        registry: docker.pkg.github.com
-        repository: husgutt/prosjektore/prosjektore
       
     - name: Build container image
-      uses: docker/build-push-action@v1
+      uses: docker/build-push-action@v2
       with:
         push: true
         tags: user/app:latest
