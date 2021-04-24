@@ -32,11 +32,16 @@ jobs:
       with:
         name: webpack artifacts
         path: public
-    - name: Build container image
-      uses: docker/build-push-action@v1
+    - name: Login to github
+      uses: docker/login-action@v1
       with:
         username: ${{github.actor}}
         password: ${{secrets.GITHUB_TOKEN}}
         registry: docker.pkg.github.com
         repository: husgutt/prosjektore/prosjektore
+      
+    - name: Build container image
+      uses: docker/build-push-action@v1
+      with:
+        push: true
         tags: user/app:latest
