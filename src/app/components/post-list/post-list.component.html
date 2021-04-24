@@ -1,4 +1,22 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  
+    <label>
+      Title
+      <input type="text" formControlName="title">
+    </label>
+  
+    <label>
+      Content
+      <textarea formControlName="content"></textarea>
+    </label>
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+
+
 <ul *ngFor="let post of posts">
+    <p>
+        <button (click)="delete(post._id)">Delete</button>
+    </p>
     <a [routerLink]="['/posts', post._id]">
         <div class="post">
             <span class="title"><h1>{{ post.title }}</h1></span>

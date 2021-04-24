@@ -7,7 +7,7 @@ import { Post } from 'src/app/domene/post';
   providedIn: 'root'
 })
 export class BlogPostsService {
-  private postUrl = 'api/posts/';
+  private postUrl = 'api/posts';
 
   constructor(private http: HttpClient)  { }
 
@@ -17,5 +17,13 @@ export class BlogPostsService {
 
   getPost(id: string): Observable< Post > {
     return this.http.get<Post>(`${this.postUrl}/${id}`);
+  }
+
+  createPost(post: Post): Observable< Post > {
+    return this.http.post<Post>(this.postUrl, post);
+  }
+
+  deletePost(id: string): Observable< Post > {
+    return this.http.delete<Post>(`${this.postUrl}/${id}`);
   }
 }

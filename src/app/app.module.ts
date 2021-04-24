@@ -10,6 +10,7 @@ import { BlogPostsService } from './services/blog-posts.service';
 import { BacklogListComponent } from './components/backlog-list/backlog-list.component';
 import { BacklogComponent } from './components/backlog/backlog.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RouterModule } from '@angular/router';
     ]),
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [BlogPostsService],
   bootstrap: [AppComponent]
