@@ -33,8 +33,8 @@ jobs:
       with:
         # list of Docker images to use as base name for tags
         images: |
-          husgutt/prosjektore
-          docker.pkg.github.com/husgutt/prosjektore
+          husgutt/prosjektore/prosjektore
+          docker.pkg.github.com/husgutt/prosjektore/prosjektore
         # generate Docker tags based on the following events/attributes
         tags: |
           type=semver,pattern={{raw}}
