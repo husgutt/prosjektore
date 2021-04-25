@@ -27,6 +27,23 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
+    - name: Docker meta
+      id: meta
+      uses: crazy-max/ghaction-docker-meta@v2
+      with:
+        # list of Docker images to use as base name for tags
+        images: |
+          name/app
+          ghcr.io/username/app
+        # generate Docker tags based on the following events/attributes
+        tags: |
+          type=schedule
+          type=ref,event=branch
+          type=ref,event=pr
+          type=semver,pattern={{version}}
+          type=semver,pattern={{major}}.{{minor}}
+          type=semver,pattern={{major}}
+          type=sha
     - name: Download built artifact
       uses: actions/download-artifact@main
       with:
@@ -42,5 +59,7 @@ jobs:
     - name: Build container image
       uses: docker/build-push-action@v2
       with:
-        push: true
-        tags: ${{ steps.meta.outputs.tag }}
+        context: .
+        push: ${{ github.event_name != 'pull_request' }}
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
